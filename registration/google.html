@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body onload="startApp();">
+
+    <!-- Кнопка Google Sign-In -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <!-- Кнопка для виходу -->
+    <button onclick="signOut();">Sign out</button>
+
+    <script>
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId());
+        console.log("Full Name: " + profile.getName());
+        console.log("Email: " + profile.getEmail());
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
+
+      function startApp() {
+        gapi.load('auth2', function() {
+          gapi.auth2.init({
+            client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com'
+          });
+        });
+      }
+    </script>
+
+</body>
+</html>

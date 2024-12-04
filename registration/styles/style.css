@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: linear-gradient(to right, #2c2c2c, #4a4a4a, #2c2c2c); 
+    background-size: 300% 300%; 
+    animation: moveBackground 8s linear infinite; 
+    color: #fff; 
+}
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%; 
+    }
+    100% {
+        background-position: 0% 50%; 
+    }
+}
+.container {
+    background: #1c1c1c;
+    width: 450px;
+    padding: 1.5em;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8); 
+}
+form {
+    margin: 0 2rem;
+}
+.form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: #ff4d4d; 
+}
+.input-group {
+    padding: 1% 0;
+    position: relative;
+}
+.input-group i {
+    position: absolute;
+    color: #b3b3b3;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-group label{
+    margin-left: 20px;
+}
+input {
+    color: #fff;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #b3b3b3;
+    padding: 10px 40px; 
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+input:focus {
+    border-bottom: 2px solid #ff4d4d; 
+    outline: none;
+}
+input::placeholder {
+    color: transparent;
+}
+label {
+    color: #b3b3b3;
+    position: relative;
+    left: 10px;
+    top: -1.3em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+input:focus ~ label, 
+input:not(:placeholder-shown) ~ label {
+    top: -4em;
+    color: #ff4d4d; 
+    font-size: 14px;
+}
+.recover {
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.recover a {
+    color: #ff4d4d; 
+    text-decoration: none;
+}
+.recover a:hover {
+    color: #d32f2f; 
+    text-decoration: underline;
+}
+.btn {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: #ff4d4d; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+.btn:hover {
+    background: #d32f2f; 
+    transform: scale(1.05);
+}
+.or {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: #b3b3b3;
+}
+.icons {
+    text-align: center;
+}
+.icons i {
+    color: #ff4d4d; 
+    padding: 0.8rem 1.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid #4a4a4a; 
+    margin: 0 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.icons i:hover {
+    background: #ff4d4d; 
+    color: #fff;
+    transform: scale(1.1);
+}
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4rem;
+    margin-top: 0.9rem;
+    font-weight: bold;
+    color: #b3b3b3;
+}
+button {
+    color: #ff4d4d; 
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    text-decoration: underline;
+    color: #d32f2f; 
+}
+.plan-text{
+    text-align: center;
+    font-family: 'Geologica', sans-serif;
+    color: red;
+    background-color: black;
+}
+.pricing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+    margin-left: -60px;
+    text-align: center;
+}
+.pricing-info h2 {
+    font-family: 'Geologica', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    max-width: 480px;
+    margin-top: 40px;
+    margin-left: -50px;
+}
+.feature-list {
+    margin-top: 20px;
+    margin-left: -60px;
+}
+.paragraph-container {
+    display: flex;
+    gap: 20px; 
+}
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    max-width: 208px; 
+}
+.feature {
+    display: flex;
+    align-items: start;
+    margin-bottom: 20px;
+    width: 500px;
+}
+.checkmark {
+    width: 20px;
+    height: 20px;
+    color: white;
+    margin-left: 100px;
+}
+.feature-content h3 {
+    font-family: 'Geologica', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 70px;
+}
+.feature-content p {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #ccc;
+    flex-wrap: wrap;
+    width: 130px; 
+}
+.pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.pricing-card {
+    background-color: #fff;
+    color: #000;
+    padding: 30px;
+    width: 200px;
+    height: 350px;
+    text-align: center;
+}
+.dark-card {
+    background-color: #0F0F0F;
+    color: #fff;
+    width: 180px;
+    height: 300px;
+}
+.pricing-card h3 {
+    font-family: 'Geologica', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price {
+    font-family: 'Geologica', sans-serif;
+    font-size: 20px;
+    color: #e50914;
+    margin: 15px 0;
+}
+.benefits {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.benefits li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #e50914;
+}
+.benefits span {
+    font-family: 'Geologica', sans-serif;
+    font-size: 12px;
+}
+.benefits-span1{
+    color: black;
+}
+.benefits-span2{
+    color: white;
+}
+.btn-plan {
+    background-color: red;
+    width: 110px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.btn-plan:hover {
+    background-color: #ef464e;
+    box-shadow: 0 0 10px rgba(239, 70, 78, 0.7), 0 0 20px rgba(239, 70, 78, 0.7);  
+    transform: scale(1.05);
+}
