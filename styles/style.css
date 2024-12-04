@@ -2741,6 +2741,13 @@ button.submit-btn:hover {
     .logo{
         margin-left: 200px;
     }
+    .nav-links{
+        margin-right: 280px;
+    }
+    .autorathion{
+        position: relative;
+        left: -250px;
+    }
     .timetable-section .logo{
         margin-left: 10px;
         margin-top: -15px;
