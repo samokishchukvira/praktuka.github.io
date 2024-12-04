@@ -106,59 +106,6 @@ arrowUp.addEventListener('click', (e) => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  fetch('json/classes.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(classes => {
-      const classesSection = document.querySelector('.classes-grid');
-      
-      classes.forEach(classItem => {
-        const classDiv = document.createElement('div');
-        classDiv.classList.add('class-item');
-        
-        classItem.icon.split(' ').forEach(cls => classDiv.classList.add(cls));
-
-        const classInfo = `
-          <div class="class-info">
-            <h3>${classItem.title}</h3>
-            <p>${classItem.description}</p> <!-- Опис класу -->
-            <span><i class="${classItem.icon}"></i></span>
-          </div>
-        `;
-        classDiv.innerHTML = classInfo;
-
-        classesSection.appendChild(classDiv);
-      });
-    })
-    .catch(error => console.error('Error loading classes:', error));
-
-    fetch('json/banner.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(banner => {
-      const bannerSection = document.querySelector('.banner-content');
-
-      const bannerContent = `
-        <h2 class="animation _anim-item">${banner.title}</h2>
-        <p class="animation-paragraph _anim-item">${banner.description}</p>
-        <a href="${banner.buttonLink}">
-          <button class="banner-button" data-aos="fade-up" data-aos-duration="3000">${banner.buttonText}</button>
-        </a>
-      `;
-
-      bannerSection.innerHTML = bannerContent;
-    })
-    .catch(error => console.error('Error loading banner:', error));
-});
 
   const modal = document.getElementById("modal");
   const openModalBtn = document.querySelector("[data-target='#modal']");
