@@ -889,6 +889,48 @@ background-image: url('../images/classes3.jpg');
     opacity: 0.7;
     margin-left: 50px;
 } 
+.error-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(135deg,#1a1a1a, #e60000)
+}
+.error-message {
+    background: linear-gradient(135deg, #e60000, #1a1a1a);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+}
+.error-message h1 {
+    font-size: 120px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.error-message p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.back-home {
+    font-size: 16px;
+    color: #e60000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #e60000;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.back-home:hover {
+    background-color: #e60000;
+    color: #000;
+}
 .modal {
     display: none; 
     position: fixed;
